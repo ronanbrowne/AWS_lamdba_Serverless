@@ -20,16 +20,8 @@ public class LamdbaCaller {
 	public static void main(String[] args) {
 
 		Gson json = new Gson();
-		String name = "Ronan Browne";
+		String name = "Ronan Browne from PC";
 		String region = "eu-west-1";
-
-	/*	if (args.length > 0) {
-			name = args[0];
-			region = args[1];
-		}
-		if (args.length > 1) {
-			region = args[1];
-		}*/
 
 		AWSLambdaAsyncClient client = new AWSLambdaAsyncClient(new ProfileCredentialsProvider("helloLamdbaUser"))
 				.withRegion(Regions.fromName(region));

@@ -14,7 +14,7 @@ public class LambdaFunctionHandler implements RequestHandler<HelloInput, HelloOu
 	@Override
 	public HelloOutput handleRequest(HelloInput input, Context context) {
 		HelloOutput myOutput = setOutput(input, context);
-		context.getLogger().log("Hi...Input: " + input);
+		context.getLogger().log("Hi...Input: " + input.getName());
 		return myOutput;
 	}
 
